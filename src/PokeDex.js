@@ -49,7 +49,12 @@ function PokeDex() {
 
   const handleChange = (e) => setSearch(e.target.value);
 
-	
+	const onClickPokemon = (url) => {
+		axios.get(url).then((response) => {
+			console.log(response.data);
+			setPokemonDetail(response.data);
+		});
+	};
 
 	const onClickNext = () => setPokemonApi(nextLink);
 
@@ -140,7 +145,7 @@ function PokeDex() {
 						{pokemons && (
 							<div className="list-container">
 								{pokemons.map((pokemon, index) => (
-									<ThumbnailCard key={index}  name={pokemon.name} />
+									<ThumbnailCard key={index} onClick={() => onClickPokemon(pokemon.url)} name={pokemon.name} />
 								))}
 							</div>
 						)}
@@ -156,7 +161,8 @@ function PokeDex() {
           }}
           style={customStyles}
         >
-          <div>
+	  <DetailCard detail={pokemonDetail} />
+          {/* <div>
             Requirement:
             <ul>
               <li>show the sprites front_default as the pokemon image</li>
@@ -170,7 +176,7 @@ function PokeDex() {
                 modal as pdf. (images and chart must be included)
               </li>
             </ul>
-          </div>
+          </div> */}
         </Modal>
       )}
     </div>
