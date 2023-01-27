@@ -24,8 +24,6 @@ function PokeDex() {
     "https://pokeapi.co/api/v2/pokemon"
  
   );
-  const [currentPage, setCurrentPage] = useState(1);
-
 
   const [searchApiFetch, setSearchApiFetch] = useState([]);
 
@@ -140,15 +138,9 @@ function PokeDex() {
 
   
 
-  const onClickNext = () => {
-    setCurrentPage(currentPage + 1)
-    setPokemonApi(nextLink)
-    console.log(currentPage)};
+  const onClickNext = () => setPokemonApi(nextLink);
 
-  const onClickPrev = () => {
-    setCurrentPage(currentPage - 1)
-    setPokemonApi(prevLink)
-   console.log(currentPage)};
+  const onClickPrev = () => setPokemonApi(prevLink);
 
   const customStyles = {
     content: {
