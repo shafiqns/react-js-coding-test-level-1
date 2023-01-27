@@ -1,7 +1,6 @@
 .App {
   text-align: center;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -14,14 +13,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-image: linear-gradient(rgb(148, 148, 148), #a1e1ff, rgb(47, 46, 46));
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .App-link {
@@ -35,4 +34,82 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.list-container {
+  display: grid;
+  width: 100vw;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  justify-items: center;
+}
+
+.search-box {
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 70%;
+  padding: 8px;
+}
+
+.couldnt-find {
+  font-size: medium;
+  color: rgb(58, 52, 0);
+  margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 770px) {
+  .list-container {
+    max-width: 1280px;
+  }
+
+  .search-box {
+    max-width: 1080px;
+    margin-bottom: 40px;
+    background-color:#1d1d10;
+    border: 2px solid white;
+    color: rgb(0, 61, 18);
+    font-weight: bold;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+  }
+
+  .search-input {
+    width: 40%;
+    padding: 8px;
+  }
+}
+
+.react-icons {
+  color: white
+}
+.button {
+  font: inherit;
+  background-color: #a38c8c;
+  border: 1px solid white;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.h1-tittle {
+  background-color: #89f1f8;
+  border: 1px solid white;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+}
+
+.chat {
+  position: fixed;
+
+  bottom: 0;
+  right: 0%;
 }

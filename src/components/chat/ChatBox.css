@@ -1,0 +1,19 @@
+.chat-popup {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .chat {
+    display: none;
+  }
+  
+.conversation {
+    font-size: 10px;
+}
+
+  .Hidden {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
